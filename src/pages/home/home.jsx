@@ -8,7 +8,7 @@ function Home() {
       <MediaQuery maxWidth={767}>
         <div className="home_wrapper_mobile">
             <div className="avatar_mobile">
-                <img src={Avatar}></img>
+                <img src={Avatar} alt="Avatar"></img>
             </div>
             <div className="about_mobile">
                   <div className="about_title_mobile">
@@ -33,7 +33,7 @@ function Home() {
        <MediaQuery minWidth={768}>
          <div className="home_wrapper">
             <div className="avatar">
-                <img src={Avatar}></img>
+                <img src={Avatar} alt="Avatar"></img>
             </div>
             <div className="about">
                 <div className="about_title">
