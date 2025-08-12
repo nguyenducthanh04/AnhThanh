@@ -12,7 +12,7 @@ function Home() {
             </div>
             <div className="about_mobile">
                   <div className="about_title_mobile">
-                    <h1>I'm Nguyen Duc Thanh</h1>
+                    <h1>I'm Nguyen Duc Thanhh</h1>
                 </div>
                 <div className="about_content_mobile">
                     <span>
