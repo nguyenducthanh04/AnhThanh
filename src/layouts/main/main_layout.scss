@@ -1,0 +1,135 @@
+.layout {
+  display: flex;
+  height: 100vh;
+  background: 
+    radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%),
+    radial-gradient(ellipse at top, #1B2735 0%, #090A0F 100%);
+  background-attachment: fixed;
+  overflow: hidden;
+  position: relative;
+  // background: black;
+}
+
+
+/* Tạo các ngôi sao */
+.layout::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(2px 2px at 20px 30px, #eee, transparent),
+    radial-gradient(2px 2px at 40px 70px, #ddd, transparent),
+    radial-gradient(1px 1px at 50px 160px, #fff, transparent),
+    radial-gradient(1px 1px at 130px 40px, #fff, transparent),
+    radial-gradient(2px 2px at 80px 10px, #eee, transparent);
+  background-repeat: repeat;
+  background-size: 200px 200px;
+  animation: zoom 10s infinite;
+  opacity: 0.3;
+}
+
+// /* Tạo các ngôi sao lớn hơn và sáng hơn */
+.layout::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(1px 1px at 20px 30px, #fff, transparent),
+    radial-gradient(1px 1px at 40px 70px, #fff, transparent),
+    radial-gradient(2px 2px at 50px 160px, #ddd, transparent),
+    radial-gradient(1px 1px at 130px 40px, #fff, transparent),
+    radial-gradient(1px 1px at 80px 10px, #fff, transparent);
+  background-repeat: repeat;
+  background-size: 300px 300px;
+  animation: zoom 15s infinite;
+  opacity: 0.5;
+}
+
+// /* Hiệu ứng chuyển động cho các ngôi sao */
+@keyframes zoom {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+// /* Thêm hiệu ứng sao băng */
+.shooting-star {
+  position: absolute;
+  height: 2px;
+  background: linear-gradient(45deg, #fff, transparent);
+  border-radius: 999px;
+  filter: drop-shadow(0 0 6px #699bff);
+  animation: shootingStar 3s linear infinite;
+}
+
+.shooting-star::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 300px;
+  height: 1px;
+  background: linear-gradient(45deg, transparent, #fff, transparent);
+}
+
+.shooting-star:nth-child(1) {
+  top: 10%;
+  left: 10%;
+  width: 100px;
+  animation-delay: 0s;
+}
+
+.shooting-star:nth-child(2) {
+  top: 30%;
+  left: 30%;
+  width: 80px;
+  animation-delay: 1s;
+}
+
+.shooting-star:nth-child(3) {
+  top: 50%;
+  left: 50%;
+  width: 120px;
+  animation-delay: 2s;
+}
+
+@keyframes shootingStar {
+  0% {
+    transform: rotate(45deg) translateX(0);
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(45deg) translateX(-500px);
+    opacity: 0;
+  }
+}
+
+.content {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+}
+@media (max-width: 768px) {
+.layout {
+    overflow-y: auto; 
+    height: auto;     
+    min-height: 100vh;
+    flex-direction: column; 
+    // background-attachment: scroll;
+  }
+}
