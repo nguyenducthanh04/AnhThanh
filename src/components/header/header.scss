@@ -1,0 +1,55 @@
+.header_wrapper {
+    width: 100%;
+    background-color: white;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: solid 1px silver;
+    position: fixed;
+    z-index: 999;
+}
+.header_left {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin-left: 20px;
+}
+.header_right {
+    height: 100%;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+}
+.avatar {
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+.name {
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+.header_social {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+.share_icon {
+    margin-left: 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+.social_link {
+    text-decoration: none;
+    color: black;
+}
+.social_icon {
+    padding: 0px 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

@@ -1,60 +1,139 @@
 import "./home.scss";
 import { Link } from "react-router-dom";
+import { FaFacebook, FaGithub, FaInstagram} from "react-icons/fa";
 import MediaQuery from "react-responsive";
-import Avatar from "../../assets/images/avatar.jpg";
+import Avatar from "../../assets/images/thanh.jpg";
+import Cover_Photo from "../../assets/images/bia.jpg";
+import Giai1 from "../../assets/images/giaithuong1.jpg";
+import Giai2 from "../../assets/images/giaithu2.jpg";
+import Project1 from "../../assets/images/project_1.png";
+
 function Home() {
     return (
         <>
-      <MediaQuery maxWidth={767}>
-        <div className="home_wrapper_mobile">
-            <div className="avatar_mobile">
-                <img src={Avatar} alt="Avatar"></img>
+        <div className="home_wrapper">
+            <div className="home_content">
+                <div className="cover_photo">
+                    <img src="https://chiasekienthuc.com.vn/images/2023-03/Quy-tac-dat-ten-trong-JavaScript.jpg" />
+                </div>
+            <div className="home_avatar">
+                <img src={Avatar} />
             </div>
-            <div className="about_mobile">
-                  <div className="about_title_mobile">
-                    <h1>I'm Nguyen Duc Thanhh</h1>
-                </div>
-                <div className="about_content_mobile">
-                    <span>
-                        Hello mọi người! Mình là Thanh, đang là sinh viên ngành Công Nghệ Thông Tin. Cơ duyên mình đến với IT là nhờ các sự tích "IT là vua của các nghề", hay câu chuyện "thằng em học BK cơ khí sinh năm 96. Tháng 5/2021, tình cờ biết đến cộng đồng F8 Fullstack của anh Sơn, mình đã hoàn thành các khóa học HTML, CSS, ReactJS và có được một số dự án cá nhân. Trải qua nhiều cay đắng, thật sự cảm ơn anh Sơn cũng như cộng đồng anh em đóng góp đã truyền động lực cho mình suốt thời gian qua giúp mình không bỏ cuộc."
-                    </span>
-                </div>
-                <div className="about_btn_mobile">
-                    <div className="btn_portfolio_mobile">
-                        <Link to="" className="btn_link">PORTFOLIO</Link>
+        </div>
+            <div className="home_user_name">
+                <h1>Nguyễn Đức Thanh</h1>
+            </div>
+            <div className="socials">
+                <Link to={"https://www.facebook.com/nguyen.uc.thanh.475548"} target="_blank" className="social_link">
+                    <div className="social_icon">
+                        <FaFacebook/>
                     </div>
-                     <div className="btn_about_mobile">
-                        <Link to="" className="btn_link">ABOUT</Link>
+                   </Link>
+                   <Link to={"https://github.com/nguyenducthanh04"} target="_blank" className="social_link">
+                    <div className="social_icon">
+                        <FaGithub/>
+                    </div>
+                   </Link>
+                   <Link to={"https://www.instagram.com/de.qing_/"} target="_blank" className="social_link">
+                    <div className="social_icon">
+                        <FaInstagram/>
+                    </div>
+                   </Link>
+            </div>
+            <div style={{padding:  '1% 5%'}}>
+                <hr></hr>
+            </div>
+            <div className="achievements">
+                <div className="achievements_title">
+                    <h1>Thành tích nổi bật</h1>
+                </div>
+                <div className="achi_list">
+                    <div className="achi_item">
+                        <div className="achi_item_image">
+                            <img src={Giai1}></img>
+                        </div>
+                        <div className="achi_item_desc">
+                            <p>Mình và các bạn trong lớp có tham gia cuộc thi lập trình Front-End do trường tổ chức và đã dành giải nhất.</p>
+                        </div>
+                    </div>
+                    <div className="achi_item">
+                        <div className="achi_item_image">
+                            <img src={Giai2}></img>
+                        </div>
+                        <div className="achi_item_desc">
+                            <p>Mình có tham gia cuộc thi tài năng cơ sở dữ liệu do trường tổ chức và đã đạt được giải nhì, tuy không cao nhưng cũng là kết quả cho sự nỗ lực của mình.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="projects">
+                <div className="projects_title">
+                    <h1>Các dự án đã làm được</h1>
+                </div>
+                <div className="project_list">
+                    <div className="project_item">
+                        <div className="project_item_image">
+                            <img src={Project1}></img>
+                        </div>
+                        <div className="project_item_desc">
+                            <p>Mình có sở thích là xem phim, mình thấy các anh chị trong group F8 - Học lập trình để đi làm code ra web phim hay quá nên mình làm theo, website này của mình sẽ được cập nhật phim liên tục, mọi người hãy thử nha.</p>
+                        </div>
+                        <div className="project_item_action">
+                            <Link to={"https://ndthah.vercel.app/"} className="btn_demo" target="_blank">
+                            <button>
+                                Demo
+                            </button>
+                            </Link>
+                            <Link to={"https://github.com/nguyenducthanh04/ndt-profile"} className="btn_code" target="_blank">
+                            <button>
+                                Github
+                            </button>
+                            </Link>
+                        </div>
+                    </div>
+                        <div className="project_item">
+                        <div className="project_item_image">
+                            <img src={Project1}></img>
+                        </div>
+                        <div className="project_item_desc">
+                            <p>Mình có sở thích là xem phim, mình thấy các anh chị trong group F8 - Học lập trình để đi làm code ra web phim hay quá nên mình làm theo, website này của mình sẽ được cập nhật phim liên tục, mọi người hãy thử nha.</p>
+                        </div>
+                        <div className="project_item_action">
+                            <Link to={"https://ndthah.vercel.app/"} className="btn_demo" target="_blank">
+                            <button>
+                                Demo
+                            </button>
+                            </Link>
+                            <Link to={"https://github.com/nguyenducthanh04/ndt-profile"} className="btn_code" target="_blank">
+                            <button>
+                                Github
+                            </button>
+                            </Link>
+                        </div>
+                    </div>
+                        <div className="project_item">
+                        <div className="project_item_image">
+                            <img src={Project1}></img>
+                        </div>
+                        <div className="project_item_desc">
+                            <p>Mình có sở thích là xem phim, mình thấy các anh chị trong group F8 - Học lập trình để đi làm code ra web phim hay quá nên mình làm theo, website này của mình sẽ được cập nhật phim liên tục, mọi người hãy thử nha.</p>
+                        </div>
+                        <div className="project_item_action">
+                            <Link to={"https://ndthah.vercel.app/"} className="btn_demo" target="_blank">
+                            <button>
+                                Demo
+                            </button>
+                            </Link>
+                            <Link to={"https://github.com/nguyenducthanh04/ndt-profile"} className="btn_code" target="_blank">
+                            <button>
+                                Github
+                            </button>
+                            </Link>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-      </MediaQuery>
-       <MediaQuery minWidth={768}>
-         <div className="home_wrapper">
-            <div className="avatar">
-                <img src={Avatar} alt="Avatar"></img>
-            </div>
-            <div className="about">
-                <div className="about_title">
-                    <h1 className="about_name">I'm Nguyen Duc Thanh</h1>
-                </div>
-                <div className="about_content">
-                    <span>
-                        Hello mọi người! Mình là Thanh, đang là sinh viên ngành Công Nghệ Thông Tin. Cơ duyên mình đến với IT là nhờ các sự tích "IT là vua của các nghề", hay câu chuyện "thằng em học BK cơ khí sinh năm 96. Tháng 5/2021, tình cờ biết đến cộng đồng F8 Fullstack của anh Sơn, mình đã hoàn thành các khóa học HTML, CSS, ReactJS và có được một số dự án cá nhân. Trải qua nhiều cay đắng, thật sự cảm ơn anh Sơn cũng như cộng đồng anh em đóng góp đã truyền động lực cho mình suốt thời gian qua giúp mình không bỏ cuộc."
-                    </span>
-                </div>
-                <div className="about_btn">
-                    <div className="btn_portfolio">
-                        <Link to="" className="btn_link">PORTFOLIO</Link>
-                    </div>
-                     <div className="btn_about">
-                        <Link to="" className="btn_link">ABOUT</Link>
-                    </div>
-                </div>
-            </div>
-        </div>
-      </MediaQuery>
     </>  
     )
 }
