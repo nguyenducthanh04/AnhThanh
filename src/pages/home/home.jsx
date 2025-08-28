@@ -1,7 +1,8 @@
 import "./home.scss";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
 import { FaFacebook, FaGithub, FaInstagram} from "react-icons/fa";
-import MediaQuery from "react-responsive";
+import { ThemeContext } from "../../layouts/main/main_layout";
 import Avatar from "../../assets/images/thanh.jpg";
 import Cover_Photo from "../../assets/images/bia.jpg";
 import Giai1 from "../../assets/images/giaithuong1.jpg";
@@ -9,9 +10,10 @@ import Giai2 from "../../assets/images/giaithu2.jpg";
 import Project1 from "../../assets/images/project_1.png";
 
 function Home() {
+    const theme = useContext(ThemeContext);
     return (
         <>
-        <div className="home_wrapper">
+        <div className={theme === "light" ? "home_wrapper" : "home_wrapper_dark_mode"}>
             <div className="home_content">
                 <div className="cover_photo">
                     <img src="https://chiasekienthuc.com.vn/images/2023-03/Quy-tac-dat-ten-trong-JavaScript.jpg" />
@@ -21,21 +23,21 @@ function Home() {
             </div>
         </div>
             <div className="home_user_name">
-                <h1>Nguyễn Đức Thanh</h1>
+                <h1 className={theme === "dark" ? "name_dark_mode" : ""}>Nguyễn Đức Thanh</h1>
             </div>
             <div className="socials">
                 <Link to={"https://www.facebook.com/nguyen.uc.thanh.475548"} target="_blank" className="social_link">
-                    <div className="social_icon">
+                    <div className={theme === "light" ? "social_icon" : "social_icon_dark_mode"}>
                         <FaFacebook/>
                     </div>
                    </Link>
                    <Link to={"https://github.com/nguyenducthanh04"} target="_blank" className="social_link">
-                    <div className="social_icon">
+                    <div className={theme === "light" ? "social_icon" : "social_icon_dark_mode"}>
                         <FaGithub/>
                     </div>
                    </Link>
                    <Link to={"https://www.instagram.com/de.qing_/"} target="_blank" className="social_link">
-                    <div className="social_icon">
+                    <div className={theme === "light" ? "social_icon" : "social_icon_dark_mode"}>
                         <FaInstagram/>
                     </div>
                    </Link>
@@ -44,7 +46,7 @@ function Home() {
                 <hr></hr>
             </div>
             <div className="achievements">
-                <div className="achievements_title">
+                <div className={theme === "light" ? "achievements_title" : "achievements_title_dark_mode"}>
                     <h1>Thành tích nổi bật</h1>
                 </div>
                 <div className="achi_list">
@@ -67,7 +69,7 @@ function Home() {
                 </div>
             </div>
             <div className="projects">
-                <div className="projects_title">
+                <div className= {theme === "light" ? "projects_title" : "projects_title_dark_mode"}>
                     <h1>Các dự án đã làm được</h1>
                 </div>
                 <div className="project_list">

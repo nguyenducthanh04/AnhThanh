@@ -4,7 +4,16 @@
   min-height: 100vh;
   margin-top: 45px;
 }
-
+.home_wrapper_dark_mode {
+  width: 100%;
+  overflow-x: hidden; 
+  min-height: 100vh;
+  margin-top: 45px;
+  background: black;
+}
+.name_dark_mode {
+    color: white;
+}
 .home_content {
   position: relative;
 }
@@ -52,6 +61,10 @@
 .projects_title h1,
 .achievements_title h1 {
     color: rgb(4, 182, 78);
+}
+.projects_title_dark_mode h1,
+.achievements_title_dark_mode h1 {
+    color: red;
 }
 .project_list,
 .achi_list {
@@ -101,6 +114,23 @@
     place-items: center;
     cursor: pointer;
     margin: 0px 10px;
+}
+.social_icon {
+    padding: 0px 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.social_icon_dark_mode {
+    padding: 0px 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
 }
 @media (max-width: 768px) {
     .home_avatar {

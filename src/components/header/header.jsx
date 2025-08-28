@@ -1,29 +1,34 @@
 import "./header.scss";
+import { useContext } from "react";
 import Avatar from "../../assets/images/thanh.jpg";
-import {FaShareSquare, FaMoon, FaRegMoon } from "react-icons/fa";
+import {FaShareSquare, FaRegMoon, FaSun } from "react-icons/fa";
 import { Link } from "react-router-dom";
-function Header() {
-    const toggleTheme = () => {
-        alert("theme");
-    }
+import { ThemeContext } from "../../layouts/main/main_layout";
+function Header( {action} ) {
+    const theme = useContext(ThemeContext);
+    console.log("theme:", theme)
     return (
-        <div className="header_wrapper">
+        <div className={theme === "light" ? "header_wrapper" : "header_wrapper_dark_mode"}>
             <div className="header_left">
                 <div className="header_avatar">
                     <img src={Avatar} className="avatar"></img>
                 </div>
                 <div className="header_name">
-                    <p className="name">Nguyen Duc Thanh</p>
+                    <p className={theme === "light" ? "name" : "name_dark_mode"}>Nguyen Duc Thanh</p>
                 </div>
             </div>
             <div className="header_right">
-                <div className="header_social">
-                   <div className="social_icon">
-                        <FaRegMoon onClick={toggleTheme}/>
+                <div className="header_action">
+                   <div className="theme_icon">
+                        {theme === "dark" ?
+                        <FaSun onClick={action} className={theme === "dark" ? "dark_icon" : ""}/> 
+                        : 
+                        <FaRegMoon onClick={action} className={theme === "dark" ? "dark_icon" : ""}/>
+                        }
                     </div>
                 </div>
                 <div className="share_btn">
-                    <FaShareSquare className="share_icon"/>
+                    <FaShareSquare className={theme === "light" ? "share_icon" : "share_icon_dark_mode"}/>
                 </div>
             </div>
         </div>

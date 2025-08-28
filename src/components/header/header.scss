@@ -9,6 +9,22 @@
     position: fixed;
     z-index: 999;
 }
+.header_wrapper_dark_mode {
+    width: 100%;
+    background-color: black;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: solid 1px rgb(31, 30, 30);
+    position: fixed;
+    z-index: 999;
+}
+.name_dark_mode {
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
 .header_left {
     display: flex;
     align-items: center;
@@ -31,7 +47,7 @@
     font-size: 0.8rem;
     font-weight: 600;
 }
-.header_social {
+.header_action {
     display: flex;
     align-items: center;
     height: 100%;
@@ -41,11 +57,20 @@
     font-size: 1.2rem;
     cursor: pointer;
 }
+.share_icon_dark_mode {
+    margin-left: 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: white;
+}
 .social_link {
     text-decoration: none;
     color: black;
 }
-.social_icon {
+.dark_icon {
+    color: white;
+}
+.theme_icon {
     padding: 0px 5px;
     font-size: 1.2rem;
     cursor: pointer;
