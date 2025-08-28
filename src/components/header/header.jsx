@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 import { ThemeContext } from "../../layouts/main/main_layout";
 function Header( {action} ) {
     const theme = useContext(ThemeContext);
-    console.log("theme:", theme)
     return (
         <div className={theme === "light" ? "header_wrapper" : "header_wrapper_dark_mode"}>
             <div className="header_left">

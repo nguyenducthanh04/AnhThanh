@@ -1,0 +1,30 @@
+.achievements {
+    padding: 0 5%;
+    margin-bottom: 30px;
+}
+.achievements_title h1 {
+    color: rgb(4, 182, 78);
+}
+.achievements_title_dark_mode h1 {
+    color: red;
+}
+.achi_list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.achi_item {
+    background: #eee;
+    padding: 20px;
+    text-align: center;
+}
+.achi_item_image img {
+    width: 100%;
+    min-height: 250px;
+}
+@media (max-width: 768px) {
+    .achi_list {
+    grid-template-columns: 1fr;
+  }
+}
