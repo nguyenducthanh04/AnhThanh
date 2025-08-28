@@ -84,6 +84,7 @@
   align-items: center;
   justify-content: center;
   z-index: 1000;
+  padding: 20px; /* thêm khoảng cách khi modal dài */
 }
 
 .modal_content {
@@ -91,10 +92,15 @@
   padding: 20px;
   width: 800px;
   max-width: 90%;
+  max-height: 80vh; /* 🔹 giới hạn chiều cao modal */
   border-radius: 10px;
   position: relative;
   animation: fadeIn 0.3s ease-in-out;
 
+  display: flex;         /* 🔹 để chia layout */
+  flex-direction: column; 
+  overflow: hidden;      /* tránh tràn */
+  
   h2 {
     margin: 0 0 10px;
   }
@@ -102,6 +108,9 @@
   .modal_body {
     margin-top: 10px;
     line-height: 1.6;
+    overflow-y: auto;  /* 🔹 cho phép cuộn */
+    flex: 1;           /* 🔹 chiếm hết phần còn lại */
+    padding-right: 6px; /* để tránh dính sát scrollbar */
   }
 }
 

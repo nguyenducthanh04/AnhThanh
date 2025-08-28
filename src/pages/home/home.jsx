@@ -7,7 +7,6 @@ import Avatar from "../../assets/images/thanh.jpg";
 import Achievement from "../../components/achievements/achievement";
 import Project from "../../components/projects/project";
 import Blog from "../../components/blogs/blog";
-
 function Home() {
     const theme = useContext(ThemeContext);
     return (

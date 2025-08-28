@@ -13,7 +13,9 @@ function Header( {action} ) {
                     <img src={Avatar} className="avatar"></img>
                 </div>
                 <div className="header_name">
+                    <Link to={'/'} style={{textDecoration: "none", color: 'black'}}>
                     <p className={theme === "light" ? "name" : "name_dark_mode"}>Nguyen Duc Thanh</p>
+                    </Link>
                 </div>
             </div>
             <div className="header_right">
