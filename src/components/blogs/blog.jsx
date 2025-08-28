@@ -62,7 +62,7 @@ function Blog() {
             <button className="close_btn" onClick={() => setSelectedBlog(null)}>
               ✖
             </button>
-            <h2>{selectedBlog.title}</h2>
+            <h3>{selectedBlog.title}</h3>
             <p>
               <b>{selectedBlog.author || "Nguyễn Đức Thanh"}</b> •{" "}
               {selectedBlog.createdAt
