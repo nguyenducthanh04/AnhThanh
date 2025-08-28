@@ -35,7 +35,7 @@ function Blog() {
                 alt="avatar"
               />
               <div className="blog_meta">
-                <h4>{item.author || "Nguyễn Đức Thanh"}</h4>
+                <h5>{item.author || "Nguyễn Đức Thanh"}</h5>
                 <span>
                   {item.createdAt
                     ? item.createdAt
@@ -62,13 +62,13 @@ function Blog() {
             <button className="close_btn" onClick={() => setSelectedBlog(null)}>
               ✖
             </button>
-            <h3>{selectedBlog.title}</h3>
-            <p>
+            <h3 style={{margin: 0}}>{selectedBlog.title}</h3>
+            {/* <p>
               <b>{selectedBlog.author || "Nguyễn Đức Thanh"}</b> •{" "}
               {selectedBlog.createdAt
                 ? selectedBlog.createdAt
                 : ""}
-            </p>
+            </p> */}
             <div className="modal_body">
               <Viewer initialValue={selectedBlog.content || ""} />
             </div>
