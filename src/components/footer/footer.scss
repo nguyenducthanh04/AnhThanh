@@ -29,17 +29,41 @@
         font-size: 0.8rem;
     }
 }
+.footer_title_dark {
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+    position: relative;
+    height: 40px;  
+    overflow: hidden;
+    flex: 1;
+    p {
+        position: absolute;
+        margin: 0;
+        animation: slideUp 0.6s ease;
+        font-size: 0.8rem;
+        color: #707375;
+    }
+}
 
 .footer_action {
     margin-right: 15px;
 }
 
-.icon_moon {
+.icon_dark_mode {
     display: flex;
     align-items: center;
     cursor: pointer;
 }
-
+.icon_sun,
+.icon_moon {
+    font-size: 1.2rem;
+}
+.icon_moon_dark,
+.icon_sun_dark {
+    font-size: 1.2rem;
+    color: white;
+}
 @keyframes slideUp {
     from {
         transform: translateY(100%);

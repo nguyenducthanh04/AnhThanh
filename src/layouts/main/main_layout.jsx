@@ -11,10 +11,9 @@ const MainLayout = ({ children }) => {
   };
   return (
     <ThemeContext.Provider value={theme}>
-      <div className="layout">
-      {/* <Header action = {toggleTheme}/> */}
+      <div className={theme === "dark" ? "layout" : "layout_light"}>
       <div className="content">{children}</div>
-        <Footer/>
+        <Footer action = {toggleTheme}/>
       </div>
     </ThemeContext.Provider>
   );

@@ -8,6 +8,14 @@
 .project_title h3 {
   font-weight: 500;
 }
+.project_title_dark {
+  margin-top: 100px;
+  margin-bottom: 30px;
+}
+.project_title_dark h3 {
+  font-weight: 500;
+  color: white;
+}
 .product_list {
   display: flex;
   flex-wrap: wrap;
@@ -35,9 +43,20 @@
   font-weight: 400;
   color: #57595b;
 }
+.project_name_dark {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-weight: 400;
+  color: white;
+}
 .project_content {
   width: 100%;
   font-size: 0.9rem;
+}
+.project_content_dark {
+  width: 100%;
+  font-size: 0.9rem;
+  color: #707375;
 }
 .project_link {
   text-decoration: none;

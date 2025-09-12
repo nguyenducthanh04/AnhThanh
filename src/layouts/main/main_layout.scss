@@ -4,8 +4,12 @@
   box-sizing: border-box;
   font-family: 'Dancing Script', 'Playwrite CO Guides', 'Playwrite HR Lijeva Guides', cursive;
 }
-
-
+.layout {
+  background: black;
+}
+.layout_light {
+  background: white;
+}
 .content {
   flex: 1;
   min-height: 0;

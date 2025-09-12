@@ -1,35 +1,35 @@
 import "./project.scss";
-import Avatar from "../../assets/images/thanh.jpg";
+import { useContext } from "react";
+import { ThemeContext } from "../../layouts/main/main_layout";
 import { Link } from "react-router-dom";
+import Movie from "../../assets/images/movie.jpg";
 
 function Project() {
+    const theme = useContext(ThemeContext);
+    const products = [
+    {
+      id: 1,
+      name: 'Movie Web',
+      description: 'Xem phim miễn phí, cập nhật liên tục',
+      image: Movie,
+      link: "https://ndthah.vercel.app/"
+    },
+  ];
     return (
             <div className="project">
-                    <div className="project_title">
+                    <div className={ theme === "dark" ? "project_title_dark" : "project_title"}>
                         <h3>Sản phẩm</h3>
                     </div>
                     <div className="product_list">
-                        <div className="product_item">
-                            <img className="product_image" src={Avatar}></img>
-                            <Link to={"/"} className="project_link">
-                            <p className="project_name">NguyenDucThanh</p>
+                        {products.map((product) => (
+                            <div className="product_item" key={product.id}>
+                            <img className="product_image" src={product.image}></img>
+                            <Link to={product.link} className="project_link">
+                            <p className={ theme === "light" ? "project_name" : "project_name_dark"}>{product.name}</p>
                             </Link>
-                            <p className="project_content">Học IELTS hiệu quả qua bài tập tương tác</p>
+                            <p className={theme === "light" ? "project_content" : "project_content_dark"}>{product.description}</p>
                         </div>
-                         <div className="product_item">
-                            <img className="product_image" src={Avatar}></img>
-                            <Link to={"/"} className="project_link">
-                            <p className="project_name">NguyenDucThanh</p>
-                            </Link>
-                            <p className="project_content">Học IELTS hiệu quả qua bài tập tương tác</p>
-                        </div>
-                        <div className="product_item">
-                            <img className="product_image" src={Avatar}></img>
-                            <Link to={"/"} className="project_link">
-                            <p className="project_name">NguyenDucThanh</p>
-                            </Link>
-                            <p className="project_content">Học IELTS hiệu quả qua bài tập tương tác</p>
-                        </div>
+                        ))}
                     </div>
                 </div>
     )
