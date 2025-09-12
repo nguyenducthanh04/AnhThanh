@@ -1,0 +1,52 @@
+.footer_wrapper {
+    display: grid;
+    place-items: center;
+    margin-top: 100px;
+}
+
+.footer_main {
+    width: 40%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    border-radius: 15px;
+    border-top: 1px solid #ccc;  
+    justify-content: space-between;
+}
+
+.footer_title {
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+    position: relative;
+    height: 40px;  
+    overflow: hidden;
+    flex: 1;
+    p {
+        position: absolute;
+        margin: 0;
+        animation: slideUp 0.6s ease;
+        font-size: 0.8rem;
+    }
+}
+
+.footer_action {
+    margin-right: 15px;
+}
+
+.icon_moon {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}

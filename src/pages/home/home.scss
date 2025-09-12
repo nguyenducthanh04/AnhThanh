@@ -1,157 +1,45 @@
-.home_wrapper {
-  width: 100%;
-  overflow-x: hidden; 
-  min-height: 100vh;
-  margin-top: 45px;
-}
-.home_wrapper_dark_mode {
-  width: 100%;
-  overflow-x: hidden; 
-  min-height: 100vh;
-  margin-top: 45px;
-  background: black;
-}
-.name_dark_mode {
-    color: white;
-}
-.home_content {
-  position: relative;
-}
-
-.cover_photo img {
-  width: 100%;
-  height: 320px;
-  object-fit: cover;
-}
-
-.home_avatar {
-  position: absolute;
-  left: 10%;
-  bottom: -65px;  
-  transform: translateX(-50%);
-  z-index: 2;
-}
-
-.home_avatar img {
-  width: 130px;
-  height: 130px;
-  border-radius: 10px;  
-  border: 4px solid #fff; 
-  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-}
-
-.home_user_name {
-  margin-top: 80px;
-  padding-left: 5%; 
-}
-.socials {
-    display: flex;
-    padding: 10px 5%;
-}
-.home_user_name h1 {
-  font-size: 28px;
-  font-weight: bold;
+* {
   margin: 0;
-}
-.projects,
-.achievements {
-    padding: 0 5%;
-    margin-bottom: 30px;
-}
-.projects_title h1,
-.achievements_title h1 {
-    color: rgb(4, 182, 78);
-}
-.projects_title_dark_mode h1,
-.achievements_title_dark_mode h1 {
-    color: red;
-}
-.project_list,
-.achi_list {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.project_item,
-.achi_item {
-    background: #eee;
-    padding: 20px;
-    text-align: center;
+.home_wrapper {
+  display: grid;
+  place-items: center;
 }
-.project_item_image img,
-.achi_item_image img {
-    width: 100%;
-    min-height: 250px;
+.main {
+  width: 40%;
+  margin: 0px 20px;
 }
-.project_item_action {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.btn_demo {
-    text-decoration: none;
-}
-.btn_demo button {
-    width: 150px;
-    height: 40px;
-    border-radius: 10px;
-    border: solid 1px rgb(4, 182, 78);
-    display: grid;
-    place-items: center;
-    cursor: pointer;
-    margin: 0px 10px;
-}
-.btn_code {
-    text-decoration: none;
-}
-.btn_code button {
-    width: 150px;
-    height: 40px;
-    border-radius: 10px;
-    border: solid 1px rgb(4, 182, 78);
-    display: grid;
-    place-items: center;
-    cursor: pointer;
-    margin: 0px 10px;
-}
-.social_icon {
-    padding: 0px 5px;
-    font-size: 1.2rem;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.social_icon_dark_mode {
-    padding: 0px 5px;
-    font-size: 1.2rem;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-}
-@media (max-width: 768px) {
-    .home_avatar {
-        left: 25%;
-    }
-    .project_list {
-     grid-template-columns: 1fr;
-    }
-    .achi_list {
-    grid-template-columns: 1fr;
-  }
-  .project_item_action {
-    flex-direction: column;   
-    gap: 10px;   
-    width: 100%;    
-    align-items: stretch;     
-  }
 
-  .btn_demo button,
-  .btn_code button {
-    width: 100%;   
-    margin: 0px;          
-  }
+.blog {
+  margin-left: 20px;
+}
+.blog_title {
+  margin-top: 100px;
+  margin-bottom: 30px;
+}
+
+
+.contect {
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+.contect_title {
+  margin-top: 100px;
+  margin-bottom: 30px;
+}
+.social {
+  margin-top: 20px;
+}
+.social_btn {
+  width: 100px;
+  height: 30px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+}
+.btn_link {
+  margin-right: 15px;
 }

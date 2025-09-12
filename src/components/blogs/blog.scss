@@ -1,10 +1,24 @@
 .blogs {
     padding: 0 5%;
     margin-bottom: 30px;
+    margin-top: 50px;
 }
-.blog_title h1 {
-    color: rgb(4, 182, 78);
-}
+.blogs-header {
+        margin-bottom: 30px;
+        
+        .blogs-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .blogs-underline {
+            width: 60px;
+            height: 3px;
+            background-color: #4a90e2;
+            margin-left: 0;
+        }
+    }
 .blog_list {
     display: flex;
     flex-direction: column;
@@ -129,3 +143,5 @@
   from { opacity: 0; transform: scale(0.9);}
   to { opacity: 1; transform: scale(1);}
 }
+
+

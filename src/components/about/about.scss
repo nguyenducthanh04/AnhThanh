@@ -1,0 +1,37 @@
+.about {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 100px;
+}
+.about_left {
+  display: grid;
+  place-items: center;
+  margin-left: 20px;
+}
+.about_right {
+  display: grid;
+  place-items: center;
+  margin-right: 20px;
+}
+.about_title {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 0;
+  margin-right: 25px;
+
+}
+.about_name {
+  font-weight: 500;
+  padding: 0;
+  margin-right: 82px;
+}
+.about_right img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  display: block;
+}
+.about_footer li {
+  color:  #707375;
+}

@@ -1,53 +1,65 @@
-import "./home.scss";
+import About from "../../components/about/about";
+import Project from "../../components/project/project";
+import Achiement from "../../components/achiement/achiement";
 import { Link } from "react-router-dom";
-import { useContext } from "react";
-import { FaFacebook, FaGithub, FaInstagram} from "react-icons/fa";
-import { ThemeContext } from "../../layouts/main/main_layout";
-import Avatar from "../../assets/images/thanh.jpg";
-import Achievement from "../../components/achievements/achievement";
-import Project from "../../components/projects/project";
-import Blog from "../../components/blogs/blog";
+import "./home.scss";
 function Home() {
-    const theme = useContext(ThemeContext);
+     const products = [
+    {
+      id: 1,
+      name: 'EnglishFast',
+      description: 'Học IELTS hiệu qua bài tập tương tác',
+      image: 'https://z-cdn-media.chatglm.cn/files/633cc236-4c66-4248-ab88-65d89ceb9fa6_pasted_image_1757609296144.png?auth_key=1789145352-9677ee9ea1aa408dbeb4aabd89774c34-0-7525f6b0beee6f3ee2573ddd6c732b04'
+    },
+    {
+      id: 2,
+      name: 'Contentfast',
+      description: 'Tiết kiệm hàng giờ tạo content mạng xã hội',
+      image: 'https://z-cdn-media.chatglm.cn/files/633cc236-4c66-4248-ab88-65d89ceb9fa6_pasted_image_1757609296144.png?auth_key=1789145352-9677ee9ea1aa408dbeb4aabd89774c34-0-7525f6b0beee6f3ee2573ddd6c732b04'
+    }
+  ];
+
     return (
-        <>
-        <div className={theme === "light" ? "home_wrapper" : "home_wrapper_dark_mode"}>
-            <div className="home_content">
-                <div className="cover_photo">
-                    <img src="https://chiasekienthuc.com.vn/images/2023-03/Quy-tac-dat-ten-trong-JavaScript.jpg" />
+        <div className="home_wrapper">
+            <div className="main">
+                <About/>
+                <Project/>
+                <Achiement/>
+                <div className="blog">
+                    <div className="blog_title">
+                        <h3>Blog</h3>
+                    </div>
+                    <div className="blog_list">
+                      <div className="blog_item">
+                        <div className="blog_item_wrap">
+                          
+                        </div>
+                      </div>
+                    </div>
                 </div>
-            <div className="home_avatar">
-                <img src={Avatar} />
+                <div className="contect">
+                  <div className="contect_title">
+                    <h3>Contect</h3>
+                  </div>
+                  <div className="contect_content">
+                    <p className="mail">
+                      Liên hệ mình ở <em style={{color: "red"}}>dducthanh04@gmail.com</em>
+                    </p>
+                    <div className="social">
+                      <Link to={"/"} className="btn_link">
+                        <button className="social_btn">Facebook</button>
+                      </Link>
+                         <Link to={"/"} className="btn_link">
+                        <button className="social_btn">Instagram</button>
+                      </Link>
+                         <Link to={"/"} className="btn_link">
+                        <button className="social_btn">Github</button>
+                      </Link>
+                    </div>
+                  </div>
+                </div>
             </div>
         </div>
-            <div className="home_user_name">
-                <h1 className={theme === "dark" ? "name_dark_mode" : ""}>Nguyễn Đức Thanh</h1>
-            </div>
-            <div className="socials">
-                <Link to={"https://www.facebook.com/nguyen.uc.thanh.475548"} target="_blank" className="social_link">
-                    <div className={theme === "light" ? "social_icon" : "social_icon_dark_mode"}>
-                        <FaFacebook/>
-                    </div>
-                   </Link>
-                   <Link to={"https://github.com/nguyenducthanh04"} target="_blank" className="social_link">
-                    <div className={theme === "light" ? "social_icon" : "social_icon_dark_mode"}>
-                        <FaGithub/>
-                    </div>
-                   </Link>
-                   <Link to={"https://www.instagram.com/de.qing_/"} target="_blank" className="social_link">
-                    <div className={theme === "light" ? "social_icon" : "social_icon_dark_mode"}>
-                        <FaInstagram/>
-                    </div>
-                   </Link>
-            </div>
-            <div style={{padding:  '1% 5%'}}>
-                <hr></hr>
-            </div>
-            <Achievement/>
-            <Project/>
-            <Blog/>
-        </div>
-    </>  
     )
-}
+} 
 export default Home;

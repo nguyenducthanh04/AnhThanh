@@ -1,0 +1,24 @@
+.achiement {
+  margin-left: 20px;
+}
+.achiement_item {
+  width: 100%;
+  height: 50px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: solid 1px #ccc;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+.achiement_title {
+  margin-top: 100px;
+  margin-bottom: 30px;
+}
+.achiement_item_name {
+  margin-left: 10px;
+}
+.achiement_time {
+  margin-right: 10px;
+}

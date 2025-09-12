@@ -18,10 +18,10 @@ function Blog() {
 
   return (
     <div className="blogs">
-      <div className="blog_title">
-        <h1>Bài viết</h1>
-      </div>
-
+         <div className="blogs-header">
+                <h1 className="blogs-title">Bài viết</h1>
+                <div className="blogs-underline"></div>
+            </div>
       <div className="blog_list">
         {blogs.map((item) => (
           <div
@@ -80,3 +80,5 @@ function Blog() {
 }
 
 export default Blog;
+
+

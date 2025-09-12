@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { createContext } from "react";
-import Header from "../../components/header/header";
+import Footer from "../../components/footer/footer";
 import "./main_layout.scss";
 export const ThemeContext = createContext();
 
@@ -12,8 +12,9 @@ const MainLayout = ({ children }) => {
   return (
     <ThemeContext.Provider value={theme}>
       <div className="layout">
-      <Header action = {toggleTheme}/>
+      {/* <Header action = {toggleTheme}/> */}
       <div className="content">{children}</div>
+        <Footer/>
       </div>
     </ThemeContext.Provider>
   );
