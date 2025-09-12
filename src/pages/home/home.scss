@@ -21,25 +21,15 @@
   margin-bottom: 30px;
 }
 
-
-.contect {
-  margin-left: 20px;
+.blog_item {
+  height: 60px;
   margin-bottom: 20px;
-}
-.contect_title {
-  margin-top: 100px;
-  margin-bottom: 30px;
-}
-.social {
-  margin-top: 20px;
-}
-.social_btn {
-  width: 100px;
-  height: 30px;
-  border-radius: 20px;
-  border: none;
   cursor: pointer;
+  &:hover {
+    border-bottom: solid 1px #ccc;
+  }
 }
-.btn_link {
-  margin-right: 15px;
+
+.blog_item_wrap p {
+  color:  #707375;
 }

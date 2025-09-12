@@ -1,7 +1,7 @@
 import About from "../../components/about/about";
 import Project from "../../components/project/project";
 import Achiement from "../../components/achiement/achiement";
-import { Link } from "react-router-dom";
+import Contect from "../../components/contect/contect";
 import "./home.scss";
 function Home() {
      const products = [
@@ -32,32 +32,19 @@ function Home() {
                     <div className="blog_list">
                       <div className="blog_item">
                         <div className="blog_item_wrap">
-                          
+                          <h4>Cuộc đời mới của tôi</h4>
+                          <p>haaaaaaaaaaaaaaaaaaaaaaaaaaannn</p>
+                        </div>
+                      </div>
+                       <div className="blog_item">
+                        <div className="blog_item_wrap">
+                          <h4>Cuộc đời mới của tôi</h4>
+                          <p>haaaaaaaaaaaaaaaaaaaaaaaaaaannn</p>
                         </div>
                       </div>
                     </div>
                 </div>
-                <div className="contect">
-                  <div className="contect_title">
-                    <h3>Contect</h3>
-                  </div>
-                  <div className="contect_content">
-                    <p className="mail">
-                      Liên hệ mình ở <em style={{color: "red"}}>dducthanh04@gmail.com</em>
-                    </p>
-                    <div className="social">
-                      <Link to={"/"} className="btn_link">
-                        <button className="social_btn">Facebook</button>
-                      </Link>
-                         <Link to={"/"} className="btn_link">
-                        <button className="social_btn">Instagram</button>
-                      </Link>
-                         <Link to={"/"} className="btn_link">
-                        <button className="social_btn">Github</button>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
+                <Contect/>
             </div>
         </div>
     )
