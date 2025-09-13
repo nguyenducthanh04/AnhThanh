@@ -1,0 +1,60 @@
+.chengji {
+  margin: 0px 20px;
+}
+.chengji_title {
+  margin-top: 100px;
+  margin-bottom: 30px;
+}
+.chengji_title h3 {
+  font-weight: 500;
+}
+.chengji_title_dark {
+    margin-top: 100px;
+    margin-bottom: 30px;
+}
+.chengji_title_dark h3 {
+    font-weight: 500;
+    color: white;
+}
+.chengji_list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.chengji_item {
+  width: 30%;
+}
+.chengji_image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+
+@media (max-width: 992px) {
+  .chengji_item {
+    width: 45%; 
+  }
+  .chengji_image {
+    height: 220px;
+  }
+}
+
+@media (max-width: 576px) {
+  .chengji_list {
+    justify-content: center; 
+  }
+  .chengji_item {
+    width: 90%;     
+    max-width: 350px;
+  }
+  .chengji_image {
+    height: 430px;  
+  }
+  .chengji_item p {
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 8px;
+  }
+}

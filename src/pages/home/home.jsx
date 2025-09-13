@@ -3,7 +3,9 @@ import Project from "../../components/project/project";
 import Achiement from "../../components/achiement/achiement";
 import Contect from "../../components/contect/contect";
 import Blog from "../../components/blog/blog";
+import ChengJi from "../../components/chengji/chengji";
 import MediaQuery from "react-responsive";
+
 import "./home.scss";
 function Home() {
     return (
@@ -13,6 +15,7 @@ function Home() {
             <div className="main">
                 <About/>
                 <Project/>
+                <ChengJi/>
                 <Achiement/>
                 <Blog/>
                 <Contect/>
@@ -23,6 +26,7 @@ function Home() {
             <div className="home_wrapper_mobile">
                 <About/>
                 <Project/>
+                <ChengJi/>
                 <Achiement/>
                 <Blog/>
                 <Contect/>

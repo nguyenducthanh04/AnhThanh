@@ -13,7 +13,7 @@ function About() {
                             <li>Sinh viên</li>
                             <li>Đại học Đại Nam</li>
                             <li>Lập trình viên</li>
-                            <li>Cột sống sinh viên đầy tham vọng</li>
+                            <li>我準備來臺灣留學，希望順利</li>
                         </ul>
                     </div>
                      <div className="about_right">
