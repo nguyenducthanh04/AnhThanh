@@ -29,3 +29,50 @@
 .achiement_time {
   margin-right: 10px;
 }
+
+
+
+@media (max-width: 992px) {
+  .achiement {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .achiement_item {
+    height: auto;             /* co giãn chiều cao */
+    padding: 10px;
+  }
+  .achiement_item_name p,
+  .achiement_time p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobile <= 576px */
+@media (max-width: 576px) {
+  .achiement {
+    margin-right: 20px;
+  }
+  .achiement_title,
+  .achiement_title_dark {
+    margin-top: 50px;
+  }
+  .achiement_item {
+    width: 100%;              
+    align-items: flex-start;  
+    padding: 10px;
+    height: auto;
+    margin-bottom: 15px;
+  }
+  .achiement_item_name {
+    margin-left: 0;
+    margin-bottom: 5px;
+  }
+  .achiement_time {
+    margin-right: 0;
+    font-size: 0.85rem;
+  }
+  .achiement_item_name p,
+  .achiement_time p {
+    font-size: 0.85rem;
+  }
+}

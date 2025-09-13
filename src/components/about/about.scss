@@ -47,3 +47,57 @@
 .about_footer li {
   color:  #707375;
 }
+
+
+
+@media (max-width: 992px) {
+  .about {
+    flex-direction: column; 
+    text-align: left;       
+    align-items: flex-start;
+  }
+  .about_left {
+    margin-left: 20px;
+    margin-bottom: 20px;
+    align-items: flex-start;
+    text-align: left;
+  }
+  .about_right {
+    margin-left: 20px;
+  }
+  .about_right img {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+/* Mobile (<= 576px) */
+@media (max-width: 576px) {
+  .about {
+    flex-direction: column-reverse; 
+    align-items: flex-start;        
+    text-align: left;
+  }
+  .about_left,
+  .about_right {
+    margin-left: 20px;
+    margin-bottom: 15px;
+    align-items: flex-start;
+  }
+  .about_name,
+  .about_name_dark {
+    font-size: 1.2rem;
+  }
+  .about_title,
+  .about_title_dark {
+    font-size: 0.95rem;
+    margin-right: 0;
+  }
+  .about_footer li {
+    font-size: 0.85rem;
+  }
+  .about_right img {
+    width: 120px;
+    height: 120px;
+  }
+}
