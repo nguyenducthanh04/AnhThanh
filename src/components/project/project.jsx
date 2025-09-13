@@ -3,6 +3,7 @@ import { useContext } from "react";
 import { ThemeContext } from "../../layouts/main/main_layout";
 import { Link } from "react-router-dom";
 import Movie from "../../assets/images/movie.jpg";
+import SmartHome from "../../assets/images/project2.jpg";
 
 function Project() {
     const theme = useContext(ThemeContext);
@@ -13,6 +14,13 @@ function Project() {
       description: 'Xem phim miễn phí, cập nhật liên tục',
       image: Movie,
       link: "https://ndthah.vercel.app/"
+    },
+    {
+      id: 2,
+      name: 'Smart Home',
+      description: 'Xây dựng thiết kế mô hình nhà thông minh',
+      image: SmartHome,
+      link: "https://github.com/nguyenducthanh04/Thiet-Ke-Nha-Thong-Minh"
     },
   ];
     return (
